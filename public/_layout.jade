@@ -1,0 +1,21 @@
+!!!
+html
+	head
+		title f.ireba.se gist viewer
+		link(rel="stylesheet", href="//cdnjs.cloudflare.com/ajax/libs/normalize/2.1.3/normalize.min.css")
+		link(rel="stylesheet", type="text/css", href="/main.css")
+	body
+		#info(data-bind='html: description')
+		#source
+		#console
+		input#url(type='text', data-bind='value: firebase_url', disabled)
+		#output
+		#footer: a(target='_blank', data-bind='html: gist_url, attr: {href: gist_url}')
+
+		script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js")
+		script(src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js")
+		script(src="//cdnjs.cloudflare.com/ajax/libs/knockout/3.0.0/knockout-min.js")
+		script(src="https://cdn.firebase.com/v0/firebase.js")
+		script(src="/lib/ace-1.1.1/src-noconflict/ace.js" type="text/javascript" charset="utf-8")
+		script(src="/firebase-codec.js" type="text/javascript" charset="utf-8")
+		script(src="/f.ireba.se.js" type="text/javascript" charset="utf-8")
